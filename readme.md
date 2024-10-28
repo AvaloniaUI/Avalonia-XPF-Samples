@@ -10,7 +10,12 @@ Key features demonstrated in these samples include:
 * Integration patterns for common WPF frameworks and libraries
 * Migration strategies and compatibility solutions
 
-Avalonia XPF is a commercial product licensed per-app. For more information about licensing and to get started with Avalonia XPF, visit the [Avalonia website](https://avaloniaui.net/xpf).
+Avalonia XPF is a commercial product licensed per-app. For more information about licensing and to get started with Avalonia XPF, visit the [Avalonia XPF web page](https://avaloniaui.net/xpf).
+
+## Setting up your environment 
+
+* The samples all use a [centralized management](https://docs.avaloniaui.net/xpf/advanced/centralized-management) of the license key, meaning you can set your license key just once! 
+* You will need to have an active trial of Avalonia XPF for these samples to work. 
 
 ## Hybrid XPF 
 Mix-and-match WPF and Avalonia in a single project. 
