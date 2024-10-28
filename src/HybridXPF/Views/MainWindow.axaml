@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:atlantis="clr-namespace:Atlantis;assembly=PresentationFramework"
+        xmlns:viewModels="clr-namespace:HybridXPF.ViewModels"
+        xmlns:views1="clr-namespace:HybridXPF.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="HybridXPF.Views.MainWindow"
+        x:DataType="viewModels:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Hybrid XPF Sample">
+
+    <Grid ColumnDefinitions="*,*" RowDefinitions="*,*">
+        <atlantis:XpfContainer Grid.Row="0" Grid.Column="0" >
+            <views1:WpfContent />
+        </atlantis:XpfContainer>
+
+
+        <atlantis:XpfContainer Grid.Row="1" Grid.Column="1">
+            <views1:WpfContent1 />
+        </atlantis:XpfContainer>
+        
+        <Calendar VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" />
+        
+        <Slider VerticalAlignment="Center" HorizontalAlignment="Stretch" Maximum="100" Value="50" Minimum="0" Grid.Row="1" Grid.Column="0"/>
+        
+    </Grid>
+
+</Window>
