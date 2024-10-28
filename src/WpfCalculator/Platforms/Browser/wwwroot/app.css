@@ -1,0 +1,35 @@
+﻿/* Root container style removing margin and scroll that are enabled by default. */
+body {
+    margin: 0px;
+    overflow: hidden
+}
+
+/* Style of the XPF container, normally stretched to the full page size. */
+div#out {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+/* HTML styles for the splash screen. */
+#avalonia-splash {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #1b2a4e;
+    justify-content: center;
+    align-items: center;
+}
+#avalonia-splash.splash-close {
+    transition: opacity 200ms, display 200ms;
+    display: none;
+    opacity: 0;
+}
+
+/* Helper styles for Avalonia internals */
+:root {
+    --sat: env(safe-area-inset-top);
+    --sar: env(safe-area-inset-right);
+    --sab: env(safe-area-inset-bottom);
+    --sal: env(safe-area-inset-left);
+}

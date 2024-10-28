@@ -27,3 +27,10 @@ This sample demonstrates how you can add WPF controls to your existing Avalonia 
 ### Important notes
 
 * The Avalonia version must match! As of `1.4.0-cibuild001849` you should use `11.2.999-cibuild0052170-alpha`. 
+
+
+## Mobile & WebAssembly 
+We have iOS, Android and WebAssembly support in preview with select customers. To enable these platforms, we recommend creating a Single Project, which contains Desktop, Mobile and Web versions of your WPF applications. 
+The sample app demonstrates this apporach. 
+
+![WASM Screenshot](/assets/wasm-calc.png)

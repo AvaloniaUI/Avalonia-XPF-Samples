@@ -1,0 +1,26 @@
+<Project Sdk="Xpf.Sdk/1.4.0-cibuild001849">
+    <PropertyGroup>
+        <TargetFrameworks>net8.0;net8.0-ios;net8.0-android;net8.0-browser</TargetFrameworks>
+        <UseWpf>true</UseWpf>
+        <OutputType>exe</OutputType>
+        <XpfSingleProject>true</XpfSingleProject>
+        <ApplicationId>AvaloniaUI.CalculatorDemo</ApplicationId>
+    </PropertyGroup>
+
+    <!-- Temporary hack for iOS -->
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-ios' AND '$(RuntimeIdentifier)' != 'ios-arm64'">
+        <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
+    </PropertyGroup>
+    
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <CodesignKey>iPhone Developer</CodesignKey>
+    </PropertyGroup>
+    
+    <ItemGroup>
+    </ItemGroup>
+    <ItemGroup>
+        <TrimmerRootAssembly Include="WpfCalculator" />
+        <Resource Include="appicon.ico"/>
+        <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />    
+    </ItemGroup>
+</Project>
