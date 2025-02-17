@@ -34,3 +34,22 @@ We have iOS, Android and WebAssembly support in preview with select customers. T
 The sample app demonstrates this apporach. 
 
 ![WASM Screenshot](/assets/wasm-calc.png)
+
+
+## XPF DevExpress controls app example
+This example demonstrates how to integrate and utilize DevExpress UI components within XPF.
+Features Demonstrated:
+
+✅ Barcode
+
+✅ TimePicker
+
+✅ ToggleSwitch
+
+✅ TrackBar
+
+### NuGet Package Configuration
+This project includes the DevExpress NuGet feed, which is configured in NuGet.Config. The DevExpress package source URL utilizes an environment variable (%DevExpressKey%) for authentication.
+To ensure proper package resolution, set your DevExpress API key as an environment variable before restoring dependencies.
+
+![DevExpress Screenshot](/assets/devexpress-app.png)
