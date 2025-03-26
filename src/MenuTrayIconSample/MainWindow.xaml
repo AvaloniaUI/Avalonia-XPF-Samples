@@ -1,0 +1,93 @@
+﻿<Window x:Class="MenuTrayIconSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/Assets/appicon.ico"
+        Title="App Menu and Tray Icon" Height="500" Width="350"
+        Background="#2c3e50">
+
+    <Window.Resources>
+        <Style x:Key="BaseButtonStyle" TargetType="Button">
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+
+        <Style x:Key="NumberButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background" Value="#4D4D4D" />
+        </Style>
+
+        <Style x:Key="OperatorButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background" Value="#0696D7" />
+        </Style>
+
+        <Style x:Key="FunctionButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background" Value="#6A6A6A" />
+        </Style>
+
+        <Style x:Key="EqualsButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background" Value="#FF5500" />
+        </Style>
+
+        <Style x:Key="DisplayTextBoxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="36" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="TextAlignment" Value="Right" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="#1E1E1E" />
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" Text="{Binding Display, Mode=OneWay}" 
+                 IsReadOnly="True" IsReadOnlyCaretVisible="False"
+                 Style="{StaticResource DisplayTextBoxStyle}"/>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Content="7" Grid.Row="1" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="7" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="8" Grid.Row="1" Grid.Column="1" Command="{Binding NumberCommand}" CommandParameter="8" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="9" Grid.Row="1" Grid.Column="2" Command="{Binding NumberCommand}" CommandParameter="9" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="&#xF7;" Grid.Row="1" Grid.Column="3" Command="{Binding OperatorCommand}" CommandParameter="/" Style="{DynamicResource OperatorButtonStyle}"/>
+
+            <Button Content="4" Grid.Row="2" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="4" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="5" Grid.Row="2" Grid.Column="1" Command="{Binding NumberCommand}" CommandParameter="5" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="6" Grid.Row="2" Grid.Column="2" Command="{Binding NumberCommand}" CommandParameter="6" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="&#xD7;" Grid.Row="2" Grid.Column="3" Command="{Binding OperatorCommand}" CommandParameter="*" Style="{DynamicResource OperatorButtonStyle}"/>
+
+            <Button Content="1" Grid.Row="3" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="1" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="2" Grid.Row="3" Grid.Column="1" Command="{Binding NumberCommand}" CommandParameter="2" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="3" Grid.Row="3" Grid.Column="2" Command="{Binding NumberCommand}" CommandParameter="3" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="-" Grid.Row="3" Grid.Column="3" Command="{Binding OperatorCommand}" CommandParameter="-" Style="{DynamicResource OperatorButtonStyle}"/>
+
+            <Button Content="0" Grid.Row="4" Grid.Column="0" Command="{Binding NumberCommand}" CommandParameter="0" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="." Grid.Row="4" Grid.Column="1" Command="{Binding DecimalCommand}" Style="{DynamicResource NumberButtonStyle}"/>
+            <Button Content="=" Grid.Row="4" Grid.Column="2" Command="{Binding EqualsCommand}" Style="{DynamicResource EqualsButtonStyle}"/>
+            <Button Content="+" Grid.Row="4" Grid.Column="3" Command="{Binding OperatorCommand}" CommandParameter="+" Style="{DynamicResource OperatorButtonStyle}"/>
+
+            <Button Content="C" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Command="{Binding ClearCommand}" Style="{DynamicResource FunctionButtonStyle}"/>
+            <Button Content="CE" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Command="{Binding ClearEntryCommand}" Style="{DynamicResource FunctionButtonStyle}"/>
+        </Grid>
+    </Grid>
+</Window>

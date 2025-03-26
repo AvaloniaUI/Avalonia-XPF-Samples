@@ -48,6 +48,12 @@ Features Demonstrated:
 
 ✅ TrackBar
 
+
+![Screenshot](/assets/trayicondemo.png)
+ 
+# XPF App Menu and Tray Icon example
+This example demonstrates how to utilize tray icons with menus and the global application menu bar within XPF.
+
 ### NuGet Package Configuration
 This project includes the DevExpress NuGet feed, which is configured in NuGet.Config. The DevExpress package source URL utilizes an environment variable (%DevExpressKey%) for authentication.
 To ensure proper package resolution, set your DevExpress API key as an environment variable before restoring dependencies.

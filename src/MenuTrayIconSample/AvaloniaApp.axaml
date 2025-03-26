@@ -1,0 +1,29 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModels="clr-namespace:MenuTrayIconSample.ViewModels"
+             Name="App Menu and Tray Icon"
+             NativeMenu.Menu="{DynamicResource SharedMenu}"
+             x:DataType="viewModels:AppViewModel"
+             x:Class="MenuTrayIconSample.AvaloniaApp">
+    <!-- The NativeMenu.Menu setter is for setting the global menu for OS's with NativeMenu bars like macOS and KDE based Linux distros. -->
+    <!-- One can set these on window-level as well for window-specific global menu. -->
+    <Application.Resources>
+        <!-- The Shared NativeMenu object -->
+        <NativeMenu x:Key="SharedMenu">
+            <NativeMenuItem Header="Show Sample Dialog" Command="{Binding SampleDialogCommand}" />
+            <NativeMenuItemSeparator/>
+            <NativeMenuItem Header="Exit" Command="{Binding AppExitCommand}" />
+        </NativeMenu>
+    </Application.Resources>
+    <Application.Styles>
+        <SimpleTheme />
+    </Application.Styles>    
+    <!-- This sets the TrayIcon if the OS supports it (Windows/Linux). -->
+    <TrayIcon.Icons>
+        <TrayIcons>
+            <TrayIcon Icon="/Assets/appicon.ico" 
+                      ToolTipText="MenuTrayIconSample"
+                      Menu="{DynamicResource SharedMenu}" />
+        </TrayIcons>
+    </TrayIcon.Icons>
+</Application>
