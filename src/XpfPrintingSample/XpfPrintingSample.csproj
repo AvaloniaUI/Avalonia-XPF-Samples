@@ -1,0 +1,17 @@
+﻿<Project Sdk="Xpf.Sdk/1.4.0">
+    <PropertyGroup>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <UseWpf>true</UseWpf>
+        <OutputType>exe</OutputType>
+    </PropertyGroup>
+
+    <!-- XPF License Key -->
+    <ItemGroup>
+        <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Resource Include="Assets\*"/>
+        <AvaloniaResource Include="Assets\*"/>
+    </ItemGroup>
+</Project>

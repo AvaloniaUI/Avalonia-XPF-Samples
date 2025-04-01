@@ -1,0 +1,47 @@
+<Window x:Class="XpfPrintingSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="XPF PDF Printing Demo" Height="600" Width="900"
+        Background="White">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Content that will be printed -->
+        <Border x:Name="PrintableArea"
+                BorderBrush="LightGray"
+                BorderThickness="2"
+                Padding="20"
+                Margin="0,10"
+                Grid.Row="1"
+                Background="#FFF0F5"
+                CornerRadius="8">
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="This content will be included in the PDF export."
+                           FontSize="18"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"
+                           Margin="0,0,0,20"/>
+                
+                <TextBlock Text="Hello, printed world!"
+                           FontSize="24"
+                           FontWeight="SemiBold"
+                           HorizontalAlignment="Center"
+                           Foreground="DarkSlateBlue"/>
+            </StackPanel>
+        </Border>
+        
+        <Button Content="Generate Printable PDF"
+                Width="250"
+                Height="45"
+                HorizontalAlignment="Center"
+                Margin="0,20,0,0"
+                Click="PrintButton_Click"
+                Grid.Row="2"/>
+    </Grid>
+</Window>
