@@ -4,7 +4,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridXPF", "src\HybridXPF\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCalculator", "src\WpfCalculator\WpfCalculator.csproj", "{DE952C9A-C2A6-40DF-B86E-4E1327BE03EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpressApp", "DevExpressApp\DevExpressApp.csproj", "{67FD421A-24AC-4310-A1F5-2EC0156BE528}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpressApp", "src\DevExpressApp\DevExpressApp.csproj", "{67FD421A-24AC-4310-A1F5-2EC0156BE528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpfPrintingSample", "src\XpfPrintingSample\XpfPrintingSample.csproj", "{7103579B-3CBD-43D6-9E34-AF34671F50C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +26,9 @@ Global
 		{67FD421A-24AC-4310-A1F5-2EC0156BE528}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67FD421A-24AC-4310-A1F5-2EC0156BE528}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67FD421A-24AC-4310-A1F5-2EC0156BE528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7103579B-3CBD-43D6-9E34-AF34671F50C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7103579B-3CBD-43D6-9E34-AF34671F50C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7103579B-3CBD-43D6-9E34-AF34671F50C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7103579B-3CBD-43D6-9E34-AF34671F50C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
