@@ -10,8 +10,25 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="Printer Name:" FontWeight="Bold"/>
+                <TextBox x:Name="Printer" Width="300" Height="25"/>
+            </StackPanel>
 
-        <!-- Content that will be printed -->
+            <StackPanel>
+                <TextBlock Text="Number of Copies:" FontWeight="Bold"/>
+                <TextBox x:Name="PrintingCount" Width="100" Height="25" Text="1"/>
+            </StackPanel>
+
+            <Button Content="Print Now"
+                    Width="120"
+                    Height="40"
+                    Margin="10,20,0,0"
+                    Click="PrintNowButton_Click"/>
+        </StackPanel>
+        
         <Border x:Name="PrintableArea"
                 BorderBrush="LightGray"
                 BorderThickness="2"

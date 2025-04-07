@@ -1,17 +1,21 @@
 ﻿<Project Sdk="Xpf.Sdk/1.4.0">
     <PropertyGroup>
-        <TargetFramework>net8.0-windows</TargetFramework>
+        <TargetFramework>net6.0-windows</TargetFramework>
         <UseWpf>true</UseWpf>
         <OutputType>exe</OutputType>
     </PropertyGroup>
 
     <!-- XPF License Key -->
     <ItemGroup>
-        <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)"/>
+        <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />
     </ItemGroup>
 
     <ItemGroup>
-        <Resource Include="Assets\*"/>
-        <AvaloniaResource Include="Assets\*"/>
+        <Resource Include="Assets\*" />
+        <AvaloniaResource Include="Assets\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AvaloniaUI.XpfAdaptations.PDFtoPrinter" Version="1.0.0-cibuild000006" />
     </ItemGroup>
 </Project>
