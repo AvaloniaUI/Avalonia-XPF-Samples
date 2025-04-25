@@ -16,6 +16,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="AvaloniaUI.XpfAdaptations.PDFtoPrinter" Version="1.0.0-cibuild000006" />
+        <PackageReference Include="AvaloniaUI.XpfAdaptations.PDFtoPrinter" Version="1.0.0-cibuild000008" />
     </ItemGroup>
 </Project>
