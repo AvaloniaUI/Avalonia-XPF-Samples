@@ -1,0 +1,51 @@
+<UserControl x:Class="ActiproApp.Views.TimePickerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:editors="http://schemas.actiprosoftware.com/winfx/xaml/editors"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Margin="0 10 20 20">
+            <TextBlock Text="Time Picker"
+                       FontSize="27"
+                       FontWeight="Bold"
+                       Foreground="#333"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 10"/>
+            <TextBlock Text="Selects time values."
+                       FontSize="14"
+                       Foreground="#666"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- TimePicker -->
+        <editors:TimePicker Grid.Row="1"
+                            x:Name="timePicker"
+                            Value="{Binding SelectedTime, Mode=TwoWay}"
+                            Width="300"
+                            HorizontalAlignment="Center"
+                            Margin="0 10"/>
+
+        <!-- Display the selected time -->
+        <TextBlock Grid.Row="2"
+                   Text="{Binding SelectedTime, StringFormat='Selected Time: {0:HH\\:mm}'}"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   Foreground="#444"
+                   HorizontalAlignment="Center"
+                   Margin="0 20"/>
+    </Grid>
+</UserControl>

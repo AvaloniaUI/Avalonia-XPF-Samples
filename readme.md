@@ -36,19 +36,11 @@ The sample app demonstrates this apporach.
 ![WASM Screenshot](/assets/wasm-calc.png)
 
 
-## XPF DevExpress controls app example
-This example demonstrates how to integrate and utilize DevExpress UI components within XPF.
-Features Demonstrated:
-
-✅ Barcode
-
-✅ TimePicker
-
-✅ ToggleSwitch
-
-✅ TrackBar
-
-![DevExpress Screenshot](/assets/devexpress-app.png)
+## XPF with 3rd Party Libraries
+This repository contains example applications demonstrating how to use XPF with the following third-party UI libraries:
+- Actipro , see [`Here`](./src/ActiproApp)
+- DevExpress, see [`Here`](./src/DevExpressApp)
+- Syncfusion, see [`Here`](./src/SyncfusionApp)
 
  
 ## XPF App Menu and Tray Icon example

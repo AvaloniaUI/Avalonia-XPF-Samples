@@ -2,18 +2,46 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors">
-    <Grid>
-         <dxe:ToggleSwitch dxe:EditorAppearanceProperties.CheckedStateBackground="#FFC090FF"
-                    dxe:EditorAppearanceProperties.CheckedStateBorderBrush="#FF4E00BE"
-                    BorderBrush="#FF4E00BE"
-                    BorderThickness="2"
-                    CornerRadius="2"
-                    Foreground="#FF505050"
-                    ToggleSwitchHeight="20"
-                    ToggleSwitchWidth="40"
-                    CheckedStateContent="On"
-                    UncheckedStateContent="Off"
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Grid.Row="0"
                     HorizontalAlignment="Center"
-                    VerticalAlignment="Center"/>
+                    Margin="0 10 20 20">
+
+            <TextBlock Text="Toggle Switch"
+                       FontSize="27"
+                       FontWeight="Bold"
+                       Foreground="#333"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 10"/>
+
+            <TextBlock Text="Toggles between On and Off states."
+                       FontSize="14"
+                       Foreground="#666"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center" />
+        </StackPanel>
+        
+        <Grid Grid.Row="1">
+            <dxe:ToggleSwitch 
+                dxe:EditorAppearanceProperties.CheckedStateBackground="#FFC090FF"
+                dxe:EditorAppearanceProperties.CheckedStateBorderBrush="#FF4E00BE"
+                BorderBrush="#FF4E00BE"
+                BorderThickness="2"
+                CornerRadius="2"
+                Foreground="#FF505050"
+                ToggleSwitchHeight="20"
+                ToggleSwitchWidth="40"
+                CheckedStateContent="On"
+                UncheckedStateContent="Off"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </UserControl>

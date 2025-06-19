@@ -1,9 +1,9 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
-using DevExpressApp.Views;
+using ActiproApp.Views;
 
-namespace DevExpressApp
+namespace ActiproApp
 {
     public partial class MainWindow : Window
     {
@@ -16,11 +16,10 @@ namespace DevExpressApp
         private void ResetButtons()
         {
             BtnBarCode.IsChecked = false;
+            BtnShowMicroChart.IsChecked = false;
             BtnTimePicker.IsChecked = false;
             BtnToggleSwitch.IsChecked = false;
-            BtnTrackBar.IsChecked = false;
             BtnGridDemo.IsChecked = false;
-            BtnSimpleButtonDemo.IsChecked = false;
         }
 
         private void ShowBarCode(object sender, RoutedEventArgs e)
@@ -43,24 +42,17 @@ namespace DevExpressApp
             BtnToggleSwitch.IsChecked = true;
             MainContent.Content = new ToggleSwitchView();
         }
-
-        private void ShowTrackBar(object sender, RoutedEventArgs e)
-        {
-            ResetButtons();
-            BtnTrackBar.IsChecked = true;
-            MainContent.Content = new TrackBarView();
-        }
         private void ShowGrid(object sender, RoutedEventArgs e)
         {
             ResetButtons();
             BtnGridDemo.IsChecked = true;
             MainContent.Content = new GridDemoView();
         }
-        private void ShowButton(object sender, RoutedEventArgs e)
+        private void ShowMicroChart(object sender, RoutedEventArgs e)
         {
             ResetButtons();
-            BtnSimpleButtonDemo.IsChecked = true;
-            MainContent.Content = new ButtonView();
+            BtnShowMicroChart.IsChecked = true;
+            MainContent.Content = new MicroChartView();
         }
 
 

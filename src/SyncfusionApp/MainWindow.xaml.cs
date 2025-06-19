@@ -1,9 +1,9 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
-using DevExpressApp.Views;
+using SyncfusionApp.Views;
 
-namespace DevExpressApp
+namespace SyncfusionApp
 {
     public partial class MainWindow : Window
     {
@@ -18,9 +18,9 @@ namespace DevExpressApp
             BtnBarCode.IsChecked = false;
             BtnTimePicker.IsChecked = false;
             BtnToggleSwitch.IsChecked = false;
-            BtnTrackBar.IsChecked = false;
+            BtnCarousel.IsChecked = false;
             BtnGridDemo.IsChecked = false;
-            BtnSimpleButtonDemo.IsChecked = false;
+            BtnCalculator.IsChecked = false;
         }
 
         private void ShowBarCode(object sender, RoutedEventArgs e)
@@ -44,11 +44,11 @@ namespace DevExpressApp
             MainContent.Content = new ToggleSwitchView();
         }
 
-        private void ShowTrackBar(object sender, RoutedEventArgs e)
+        private void ShowCarousel(object sender, RoutedEventArgs e)
         {
             ResetButtons();
-            BtnTrackBar.IsChecked = true;
-            MainContent.Content = new TrackBarView();
+            BtnCarousel.IsChecked = true;
+            MainContent.Content = new CarouselView();
         }
         private void ShowGrid(object sender, RoutedEventArgs e)
         {
@@ -56,11 +56,11 @@ namespace DevExpressApp
             BtnGridDemo.IsChecked = true;
             MainContent.Content = new GridDemoView();
         }
-        private void ShowButton(object sender, RoutedEventArgs e)
+        private void ShowCalculator(object sender, RoutedEventArgs e)
         {
             ResetButtons();
-            BtnSimpleButtonDemo.IsChecked = true;
-            MainContent.Content = new ButtonView();
+            BtnCalculator.IsChecked = true;
+            MainContent.Content = new CalculatorView();
         }
 
 

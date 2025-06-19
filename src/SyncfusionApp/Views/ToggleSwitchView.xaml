@@ -1,0 +1,51 @@
+<UserControl x:Class="SyncfusionApp.Views.ToggleSwitchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="800">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header Section -->
+        <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Margin="0,10,20,20">
+
+            <TextBlock Text="ButtonAdv"
+                       FontSize="27"
+                       FontWeight="Bold"
+                       Foreground="#283580"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,10"/>
+
+            <TextBlock Text="Simulates a toggle switch using Syncfusion ButtonAdv."
+                       FontSize="14"
+                       Foreground="#333"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center" />
+        </StackPanel>
+
+        <!-- ButtonAdv -->
+        <Grid Grid.Row="1">
+            <syncfusion:ButtonAdv
+                Label="Turn On"
+                Width="120"
+                Height="40"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                IsCheckable="True"
+                SizeMode="Normal"
+                CornerRadius="6"
+                Checked="ButtonAdv_Click"
+                x:Name="toggleButton"/>
+        </Grid>
+    </Grid>
+</UserControl>
