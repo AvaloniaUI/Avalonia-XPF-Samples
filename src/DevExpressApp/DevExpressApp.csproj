@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
-        <AvaloniaVersion>11.2.999-cibuild0052170-alpha</AvaloniaVersion>
         <TargetFramework>net8.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
@@ -21,12 +20,19 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="DevExpress.Data" Version="24.2.0" />
-        <PackageReference Include="DevExpress.Data.Desktop" Version="24.2.0" />
-        <PackageReference Include="DevExpress.Pdf.SkiaRenderer" Version="24.2.0" />
-        <PackageReference Include="DevExpress.Wpf.Core" Version="24.2.0" />
-        <PackageReference Include="DevExpress.Wpf.Themes.All" Version="24.2.0" />
+        <PackageReference Include="DevExpress.Wpf.Core" Version="24.2.7" />
+        <PackageReference Include="DevExpress.Data" Version="24.2.7" />
+        <PackageReference Include="DevExpress.Data.Desktop" Version="24.2.7" />
+        <PackageReference Include="DevExpress.Pdf.SkiaRenderer" Version="24.2.7" />
+        <PackageReference Include="DevExpress.Wpf.Spreadsheet" Version="24.2.7" />
+        <PackageReference Include="DevExpress.Wpf.Themes.All" Version="24.2.7" />
         <PackageReference Include="Dotnet.Bundle" Version="0.9.13" />
+        <PackageReference Include="System.IO.Packaging" Version="9.0.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\dev-express.png" />
+      <Resource Include="Assets\dev-express.png" />
     </ItemGroup>
 
 </Project>
