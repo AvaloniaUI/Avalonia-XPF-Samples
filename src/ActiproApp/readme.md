@@ -6,13 +6,13 @@ Features Demonstrated:
 
 ✅ Barcode
 
-✅ TimePicker
+✅ DataGrid
 
 ✅ MicroChart
 
-✅ ToggleSwitch
+✅ TimePicker
 
-✅ DataGrid
+✅ ToggleSwitch
 
 ![Actipro Screenshot](/assets/actipro-app.png)
 
@@ -22,7 +22,8 @@ You can find a list of all supported Actipro controls here [`Here`](https://aval
 
 ### XPF Licensing
 This project includes the XPF NuGet feed, which is configured in [`NuGet.Config`](./NuGet.config). The XPF package source and csproj utilize an environment variable (%XpfLicenseKey%) for authentication.
-To ensure proper package resolution, set your XpfLicenseKey API key as an environment variable before restoring dependencies.
+- Set your XPF license key as the `XpfLicenseKey` environment variable before restoring dependencies.
+- Alternatively, add your XPF license key directly in [`NuGet.Config`](./NuGet.config) and [`ActiproApp.csproj`](./ActiproApp.csproj)
 
 ### Actipro Licensing
 This app requires Actipro license keys to be provided in [`App.xaml.cs`](./App.xaml.cs)

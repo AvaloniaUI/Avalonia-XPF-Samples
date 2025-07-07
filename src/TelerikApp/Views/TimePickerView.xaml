@@ -1,0 +1,44 @@
+<UserControl x:Class="TelerikApp.Views.TimePickerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        
+        <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Margin="0 10 20 20">
+    
+            <TextBlock Text="Time Picker"
+                       FontSize="27"
+                       FontWeight="Bold"
+                       Foreground="#333"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 10"/> 
+
+            <TextBlock Text="Selects time values."
+                       FontSize="14"
+                       Foreground="#666"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center" />
+        </StackPanel>
+        
+        <Grid Grid.Row="1">
+            <telerik:RadTimePicker Grid.Row="1"
+                                   x:Name="timePicker"
+                                   SelectedTime="15:00"
+                                   Width="200"
+                                   Margin="0 50 0 10"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Top"
+                                   TimeInterval="00:30:00"
+            />
+        </Grid>
+    </Grid>
+</UserControl>

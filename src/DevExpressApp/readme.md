@@ -24,7 +24,8 @@ You can find a list of all supported DevExpress controls here [`Here`](https://a
 
 ### XPF Licensing
 This project includes the XPF NuGet feed, which is configured in [`NuGet.Config`](./NuGet.config). The XPF package source and csproj utilize an environment variable (%XpfLicenseKey%) for authentication.
-To ensure proper package resolution, set your XpfLicenseKey API key as an environment variable before restoring dependencies.
+- Set your XPF license key as the `XpfLicenseKey` environment variable before restoring dependencies.
+- Alternatively, add your XPF license key directly in [`NuGet.Config`](./NuGet.config) and [`DevExpressApp.csproj`](./DevExpressApp.csproj)
 
 ### DevExpress Licensing
 The DevExpress package source URl utilizes an environment variable (%DevExpress%). Set your DevExpress license key as enviromental variable DevExpress or add into URI, see [`NuGet.Config`](./NuGet.Config).

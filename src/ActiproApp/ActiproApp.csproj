@@ -1,4 +1,4 @@
-﻿<Project Sdk="Xpf.Sdk/1.3.0">
+﻿<Project Sdk="Xpf.Sdk/1.5.3">
 
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
@@ -16,6 +16,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <!-- Add your XPF license key -->
         <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />
     </ItemGroup>
 
@@ -30,7 +31,6 @@
     <ItemGroup>
       <None Remove="Assets\actipro.png" />
       <Resource Include="Assets\actipro.png" />
-      <None Remove="devExpress-app.png" />
     </ItemGroup>
 
 </Project>

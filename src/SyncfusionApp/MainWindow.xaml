@@ -1,14 +1,12 @@
 <Window x:Class="SyncfusionApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
-        xmlns:local="clr-namespace:SyncfusionApp.Views"
         Title="Syncfusion XPF Controls Demo" Height="600" Width="1000"
         Background="#F3F3F3"
         WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
-        <Style x:Key="SidebarToggleButtonStyle" TargetType="ToggleButton">
+        <Style x:Key="SidebarRadioButtonStyle" TargetType="RadioButton">
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Margin" Value="0"/>
@@ -21,7 +19,7 @@
             <Setter Property="Cursor" Value="Hand"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="ToggleButton">
+                    <ControlTemplate TargetType="RadioButton">
                         <Border x:Name="border"
                                 Background="{TemplateBinding Background}"
                                 CornerRadius="0"
@@ -71,18 +69,35 @@
                            HorizontalAlignment="Center"/>
                     
                     <StackPanel>
-                        <ToggleButton x:Name="BtnBarCode" Content="Bar Code"
-                                      Style="{StaticResource SidebarToggleButtonStyle}" Click="ShowBarCode" />
-                        <ToggleButton x:Name="BtnTimePicker" Content="Time Picker"
-                                      Style="{StaticResource SidebarToggleButtonStyle}" Click="ShowTimePicker" />
-                        <ToggleButton x:Name="BtnToggleSwitch" Content="Toggle Switch"
-                                      Style="{StaticResource SidebarToggleButtonStyle}" Click="ShowToggleSwitch" />
-                        <ToggleButton x:Name="BtnCarousel" Content="Carousel"
-                                      Style="{StaticResource SidebarToggleButtonStyle}" Click="ShowCarousel" />
-                        <ToggleButton x:Name="BtnGridDemo" Content="Data Grid"
-                                      Style="{StaticResource SidebarToggleButtonStyle}" Click="ShowGrid" />
-                        <ToggleButton x:Name="BtnCalculator" Content="Calculator"
-                                      Style="{StaticResource SidebarToggleButtonStyle}" Click="ShowCalculator" />
+                        <RadioButton x:Name="BtnBarCode" Content="Bar Code"
+                                     GroupName="Sidebar"
+                                     Style="{StaticResource SidebarRadioButtonStyle}"
+                                     Checked="ShowBarCode" />
+
+                        <RadioButton x:Name="BtnCalculator" Content="Calculator"
+                                     GroupName="Sidebar"
+                                     Style="{StaticResource SidebarRadioButtonStyle}"
+                                     Checked="ShowCalculator" />
+
+                        <RadioButton x:Name="BtnCarousel" Content="Carousel"
+                                     GroupName="Sidebar"
+                                     Style="{StaticResource SidebarRadioButtonStyle}"
+                                     Checked="ShowCarousel" />
+
+                        <RadioButton x:Name="BtnGridDemo" Content="Data Grid"
+                                     GroupName="Sidebar"
+                                     Style="{StaticResource SidebarRadioButtonStyle}"
+                                     Checked="ShowGrid" />
+
+                        <RadioButton x:Name="BtnTimePicker" Content="Time Picker"
+                                     GroupName="Sidebar"
+                                     Style="{StaticResource SidebarRadioButtonStyle}"
+                                     Checked="ShowTimePicker" />
+
+                        <RadioButton x:Name="BtnToggleSwitch" Content="Toggle Switch"
+                                     GroupName="Sidebar"
+                                     Style="{StaticResource SidebarRadioButtonStyle}"
+                                     Checked="ShowToggleSwitch" />
                     </StackPanel>
                 </DockPanel>
             </Border>

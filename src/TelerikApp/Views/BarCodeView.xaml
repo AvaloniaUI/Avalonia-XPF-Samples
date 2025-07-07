@@ -1,0 +1,42 @@
+<UserControl x:Class="TelerikApp.Views.BarCodeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Margin="0 10 20 20">
+            <TextBlock Text="Barcode"
+                       FontSize="27"
+                       FontWeight="Bold"
+                       Foreground="#333"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 10" />
+
+            <TextBlock Text="Displays a barcode."
+                       FontSize="14"
+                       Foreground="#666"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <telerik:RadBarcode Value="https://www.telerik.com/wpf" Height="300" Width="300" x:Name="barcode">
+                <telerik:RadBarcode.Symbology>
+                    <telerik:QRCode />
+                </telerik:RadBarcode.Symbology>
+            </telerik:RadBarcode>
+
+            <TextBlock Text="https://www.telerik.com/wpf" 
+                       Margin="0,10,0,0" 
+                       HorizontalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

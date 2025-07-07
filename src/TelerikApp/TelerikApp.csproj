@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Xpf.Sdk/1.5.3">
+
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>net8.0-windows</TargetFramework>
@@ -7,8 +8,8 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <CFBundleName>SyncfusionApp</CFBundleName>
-        <CFBundleIdentifier>net.avaloniaui.avalonia.syncfusionapp</CFBundleIdentifier>
+        <CFBundleName>TelerikApp</CFBundleName>
+        <CFBundleIdentifier>net.avaloniaui.avalonia.telerikapp</CFBundleIdentifier>
         <NSHighResolutionCapable>true</NSHighResolutionCapable>
         <CFBundleShortVersionString>1.0.0</CFBundleShortVersionString>
         <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -20,18 +21,17 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="System.IO.Packaging" Version="9.0.6" />
         <PackageReference Include="Dotnet.Bundle" Version="0.9.13" />
-        <PackageReference Include="Syncfusion.Shared.WPF" Version="26.1.35" />
-        <PackageReference Include="Syncfusion.SfInput.WPF" Version="26.1.35" />
-        <PackageReference Include="Syncfusion.SfGrid.WPF" Version="26.1.35" />
-        <PackageReference Include="Syncfusion.SfBarcode.WPF" Version="26.1.35" />
-        <PackageReference Include="Syncfusion.GridCommon.WPF" Version="26.1.35" />
-        <PackageReference Include="Syncfusion.Shared.WPF.Classic" Version="26.1.35" />
+        <PackageReference Include="Telerik.Licensing" Version="1.6.8" />
+        <PackageReference Include="Telerik.Windows.Controls.GridView.for.Wpf.Xaml" />
+        <PackageReference Include="Telerik.Windows.Controls.Input.for.Wpf.Xaml" />
+        <PackageReference Include="Telerik.Windows.Controls.Navigation.for.Wpf.Xaml" />
+        <PackageReference Include="Telerik.Windows.Controls.DataVisualization.for.Wpf.Xaml" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="Assets\syncfusion-logo.png" />
-      <Resource Include="Assets\syncfusion-logo.png" />
+      <None Remove="Assets\telerik.png" />
+      <Resource Include="Assets\telerik.png" />
     </ItemGroup>
-
 </Project>

@@ -1,0 +1,41 @@
+﻿<Project Sdk="Xpf.Sdk/1.5.3">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <CFBundleName>InfragisticsApp</CFBundleName>
+        <CFBundleIdentifier>net.avaloniaui.avalonia.infragisticsapp</CFBundleIdentifier>
+        <NSHighResolutionCapable>true</NSHighResolutionCapable>
+        <CFBundleShortVersionString>1.0.0</CFBundleShortVersionString>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Add your XPF license key -->
+        <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Infragistics.WPF.Math.Calculators.Trial" Version="25.1.22" />
+        <PackageReference Include="Infragistics.WPF.Slider.Trial" Version="25.1.22" />
+        <PackageReference Include=" Infragistics.WPF.Charts.Olap.Trial" Version="25.1.22" />
+        <PackageReference Include="Infragistics.WPF.Trial" Version="25.1.22" />
+        <PackageReference Include="Infragistics.WPF.DataGrids.Trial" Version="25.1.22" />
+        <PackageReference Include="Infragistics.WPF.Controls.Editors.XamDateTimeInput.Trial" Version="25.1.22" />
+        <PackageReference Include="Infragistics.WPF.Barcodes.Trial" Version="25.1.22" />
+        <PackageReference Include="Dotnet.Bundle" Version="0.9.13" />
+        <PackageReference Include="System.Security.Permissions" Version="8.0.0" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <None Remove="Assets\infragistics_logo.png" />
+      <Resource Include="Assets\infragistics_logo.png" />
+    </ItemGroup>
+
+</Project>

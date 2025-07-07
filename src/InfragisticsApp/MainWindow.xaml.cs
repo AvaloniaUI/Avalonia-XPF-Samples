@@ -1,9 +1,8 @@
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Markup;
-using ActiproApp.Views;
+using InfragisticsApp.Views;
+using GridView = InfragisticsApp.Views.GridView;
 
-namespace ActiproApp
+namespace InfragisticsApp
 {
     public partial class MainWindow : Window
     {
@@ -19,24 +18,24 @@ namespace ActiproApp
             MainContent.Content = new BarCodeView();
         }
 
-        private void ShowTimePicker(object sender, RoutedEventArgs e)
+        private void ShowCarousel(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new TimePickerView();
+            MainContent.Content = new CarouselView();
         }
 
-        private void ShowToggleSwitch(object sender, RoutedEventArgs e)
+        private void ShowSlider(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new ToggleSwitchView();
+            MainContent.Content = new SliderView();
         }
+        
         private void ShowGrid(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new GridDemoView();
+            MainContent.Content = new GridView();
         }
-        private void ShowMicroChart(object sender, RoutedEventArgs e)
+        
+        private void ShowCalendar(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new MicroChartView();
+            MainContent.Content = new CalendarView();
         }
-
-
     }
 }

@@ -1,7 +1,5 @@
-using System;
 using System.Windows;
 using Syncfusion.Licensing;
-
 
 namespace SyncfusionApp;
 
