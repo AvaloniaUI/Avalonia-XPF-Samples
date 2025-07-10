@@ -24,10 +24,10 @@
         <PackageReference Include="System.IO.Packaging" Version="9.0.6" />
         <PackageReference Include="Dotnet.Bundle" Version="0.9.13" />
         <PackageReference Include="Telerik.Licensing" Version="1.6.8" />
-        <PackageReference Include="Telerik.Windows.Controls.GridView.for.Wpf.Xaml" />
-        <PackageReference Include="Telerik.Windows.Controls.Input.for.Wpf.Xaml" />
-        <PackageReference Include="Telerik.Windows.Controls.Navigation.for.Wpf.Xaml" />
-        <PackageReference Include="Telerik.Windows.Controls.DataVisualization.for.Wpf.Xaml" />
+        <PackageReference Include="Telerik.Windows.Controls.GridView.for.Wpf.Xaml" Version="2025.2.521" />
+        <PackageReference Include="Telerik.Windows.Controls.Input.for.Wpf.Xaml" Version="2025.2.521" />
+        <PackageReference Include="Telerik.Windows.Controls.Navigation.for.Wpf.Xaml" Version="2025.2.521" />
+        <PackageReference Include="Telerik.Windows.Controls.DataVisualization.for.Wpf.Xaml" Version="2025.2.521" />
     </ItemGroup>
 
     <ItemGroup>
