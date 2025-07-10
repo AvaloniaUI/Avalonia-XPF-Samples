@@ -14,8 +14,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActiproApp", "src\ActiproAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuTrayIconSample", "src\MenuTrayIconSample\MenuTrayIconSample.csproj", "{8733F325-66E0-4143-A3D5-A7E67C9658CC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfragisticsApp", "src\InfragisticsApp\InfragisticsApp.csproj", "{B96EEFA3-49D2-4F7B-8D60-8A86F31F242F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikApp", "src\TelerikApp\TelerikApp.csproj", "{5EB5DB16-5D81-4EC6-8D2A-91DFCC63EEB0}"
@@ -141,9 +139,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B96EEFA3-49D2-4F7B-8D60-8A86F31F242F} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
-		{5EB5DB16-5D81-4EC6-8D2A-91DFCC63EEB0} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal
