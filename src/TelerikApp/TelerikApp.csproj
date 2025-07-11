@@ -8,8 +8,8 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <CFBundleName>DevExpressApp</CFBundleName>
-        <CFBundleIdentifier>net.avaloniaui.avalonia.devexpressapp</CFBundleIdentifier>
+        <CFBundleName>TelerikApp</CFBundleName>
+        <CFBundleIdentifier>net.avaloniaui.avalonia.telerikapp</CFBundleIdentifier>
         <NSHighResolutionCapable>true</NSHighResolutionCapable>
         <CFBundleShortVersionString>1.0.0</CFBundleShortVersionString>
         <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
@@ -21,19 +21,17 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="DevExpress.Wpf.Core" Version="24.2.7" />
-        <PackageReference Include="DevExpress.Data" Version="24.2.7" />
-        <PackageReference Include="DevExpress.Data.Desktop" Version="24.2.7" />
-        <PackageReference Include="DevExpress.Pdf.SkiaRenderer" Version="24.2.7" />
-        <PackageReference Include="DevExpress.Wpf.Spreadsheet" Version="24.2.7" />
-        <PackageReference Include="DevExpress.Wpf.Themes.All" Version="24.2.7" />
-        <PackageReference Include="Dotnet.Bundle" Version="0.9.13" />
         <PackageReference Include="System.IO.Packaging" Version="9.0.6" />
+        <PackageReference Include="Dotnet.Bundle" Version="0.9.13" />
+        <PackageReference Include="Telerik.Licensing" Version="1.6.8" />
+        <PackageReference Include="Telerik.Windows.Controls.GridView.for.Wpf.Xaml" Version="2025.2.521" />
+        <PackageReference Include="Telerik.Windows.Controls.Input.for.Wpf.Xaml" Version="2025.2.521" />
+        <PackageReference Include="Telerik.Windows.Controls.Navigation.for.Wpf.Xaml" Version="2025.2.521" />
+        <PackageReference Include="Telerik.Windows.Controls.DataVisualization.for.Wpf.Xaml" Version="2025.2.521" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="Assets\dev-express.png" />
-      <Resource Include="Assets\dev-express.png" />
+      <None Remove="Assets\telerik.png" />
+      <Resource Include="Assets\telerik.png" />
     </ItemGroup>
-
 </Project>

@@ -1,0 +1,47 @@
+<UserControl x:Class="InfragisticsApp.Views.SliderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:editors="http://schemas.infragistics.com/xaml"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="800">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Margin="0 10 20 20">
+
+            <TextBlock Text="XamDateTimeSlider"
+                       FontSize="27"
+                       FontWeight="Bold"
+                       Foreground="#575B57"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Margin="0 0 0 10"/>
+
+            <TextBlock Text="Selects datetime value in a range."
+                       FontSize="14"
+                       Foreground="#666"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center" />
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <editors:XamDateTimeSlider Name="xamDateTimeSlider" MinValue="01/01/2025" MaxValue="12/31/2025">
+                <editors:XamDateTimeSlider.TickMarks>
+                    <editors:DateTimeSliderTickMarks
+                        TickMarksFrequency="2"
+                        FrequencyType="Months"
+                        UseFrequency="True"
+                        />
+                </editors:XamDateTimeSlider.TickMarks>
+            </editors:XamDateTimeSlider>
+        </Grid>
+    </Grid>
+</UserControl>

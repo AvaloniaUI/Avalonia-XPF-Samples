@@ -1,7 +1,7 @@
 using System.Windows;
-using SyncfusionApp.Views;
+using TelerikApp.Views;
 
-namespace SyncfusionApp
+namespace TelerikApp
 {
     public partial class MainWindow : Window
     {
@@ -22,14 +22,14 @@ namespace SyncfusionApp
             MainContent.Content = new TimePickerView();
         }
 
-        private void ShowToggleSwitch(object sender, RoutedEventArgs e)
+        private void ShowCalendar(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new ToggleSwitchView();
+            MainContent.Content = new CalendarView();
         }
 
-        private void ShowCarousel(object sender, RoutedEventArgs e)
+        private void ShowRating(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new CarouselView();
+            MainContent.Content = new RatingView();
         }
         
         private void ShowGrid(object sender, RoutedEventArgs e)
@@ -37,9 +37,9 @@ namespace SyncfusionApp
             MainContent.Content = new GridDemoView();
         }
         
-        private void ShowCalculator(object sender, RoutedEventArgs e)
+        private void ShowBook(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new CalculatorView();
+            MainContent.Content = new BookView();
         }
     }
 }

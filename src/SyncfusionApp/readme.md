@@ -6,15 +6,15 @@ Features Demonstrated:
 
 ✅ Barcode
 
-✅ TimePicker
-
 ✅ Calculator
 
 ✅ Carousel
 
-✅ ToggleSwitch
-
 ✅ DataGrid
+
+✅ TimePicker
+
+✅ ToggleSwitch
 
 ![Syncfusion Screenshot](/assets/syncfusion-app.png)
 
@@ -25,7 +25,8 @@ You can find a list of all supported Syncfusion controls here [`Here`](https://a
 
 ### XPF Licensing
 This project includes the XPF NuGet feed, which is configured in [`NuGet.Config`](./NuGet.config). The XPF package source and csproj utilize an environment variable (%XpfLicenseKey%) for authentication.
-To ensure proper package resolution, set your XpfLicenseKey API key as an environment variable before restoring dependencies.
+- Set your XPF license key as the `XpfLicenseKey` environment variable before restoring dependencies.
+- Alternatively, add your XPF license key directly in [`NuGet.Config`](./NuGet.config) and [`SyncfusionApp.csproj`](./SyncfusionApp.csproj)
 
 ### Syncfusion Licensing
 This app requires Syncfusion license key to be provided in [`App.xaml.cs`](./App.xaml.cs)

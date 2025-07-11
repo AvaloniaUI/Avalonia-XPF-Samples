@@ -1,5 +1,4 @@
-﻿<Project Sdk="Xpf.Sdk/1.3.0">
-
+﻿<Project Sdk="Xpf.Sdk/1.5.3">
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>net8.0-windows</TargetFramework>
@@ -16,6 +15,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <!-- Add your XPF license key -->
         <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />
     </ItemGroup>
 

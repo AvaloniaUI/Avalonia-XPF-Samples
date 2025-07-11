@@ -40,7 +40,9 @@ The sample app demonstrates this apporach.
 This repository contains example applications demonstrating how to use XPF with the following third-party UI libraries:
 - Actipro , see [`Here`](./src/ActiproApp)
 - DevExpress, see [`Here`](./src/DevExpressApp)
+- Infragistics, see [`Here`](./src/InfragisticsApp)
 - Syncfusion, see [`Here`](./src/SyncfusionApp)
+- Telerik, see [`Here`](./src/TelerikApp)
 
  
 ## XPF App Menu and Tray Icon example
