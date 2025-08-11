@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfragisticsApp", "src\Infr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikApp", "src\TelerikApp\TelerikApp.csproj", "{5EB5DB16-5D81-4EC6-8D2A-91DFCC63EEB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XpfDotNetBrowserApp", "src\XpfDotNetBrowserApp\XpfDotNetBrowserApp.csproj", "{0E0B1F78-FBE3-4D48-A648-5F7AEC67F399}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
