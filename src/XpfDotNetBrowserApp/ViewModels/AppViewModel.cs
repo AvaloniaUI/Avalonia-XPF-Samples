@@ -6,24 +6,12 @@ namespace XpfDotNetBrowserApp.ViewModels;
 /// Handles all the app-level commands and others.
 /// </summary>
 public sealed class AppViewModel : ViewModelBase
-{
-    private ICommand? _sampleDialogCommand;
+{ 
     private ICommand? _refreshCommand;
-    private ICommand? _appExitCommand;
     private ICommand? _backCommand;
     private ICommand? _forwardCommand;
 
     public static AppViewModel Instance { get; } = new ();
-    
-    public ICommand? SampleDialogCommand
-    {
-        get => _sampleDialogCommand;
-        set
-        {
-            _sampleDialogCommand = value;
-            OnPropertyChanged(nameof(SampleDialogCommand));
-        }
-    }
     
     public ICommand? RefreshCommand
     {
@@ -52,16 +40,6 @@ public sealed class AppViewModel : ViewModelBase
         {
             _forwardCommand = value;
             OnPropertyChanged(nameof(ForwardCommand));
-        }
-    }
-    
-    public ICommand? AppExitCommand
-    {
-        get => _appExitCommand;
-        set
-        {
-            _appExitCommand = value;
-            OnPropertyChanged(nameof(AppExitCommand));
         }
     }
 }
