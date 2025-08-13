@@ -1,0 +1,39 @@
+﻿<Window x:Class="XpfDotNetBrowserApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:atlantis="clr-namespace:Atlantis;assembly=PresentationCore"
+        Icon="/Assets/appicon.ico"
+        Closed="MainWindow_OnClosed"
+        mc:Ignorable="d"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:views1="clr-namespace:XpfDotNetBrowserApp.Views"
+        xmlns:viewModels="clr-namespace:XpfDotNetBrowserApp.ViewModels"
+        d:DataContext="{d:DesignInstance Type=viewModels:MainViewModel}"
+        Title="Avalonia XPF with TeamDev DotNetBrowser MVVM Sample" Height="600" Width="1200"
+        Background="#2c3e50">
+    <DockPanel LastChildFill="True">
+        <DockPanel LastChildFill="True" DockPanel.Dock="Top" MinHeight="40">
+            <Button DockPanel.Dock="Left" Margin="5"
+                    Command="{Binding BackCommand}" Content="Back"/>
+            <Button DockPanel.Dock="Left" Margin="0,5"
+                    Command="{Binding ForwardCommand}" Content="Forward"/>
+            <Button DockPanel.Dock="Right" Margin="5"
+                    Command="{Binding RefreshCommand}" Content="Refresh"/>
+            <Button DockPanel.Dock="Right" Margin="0,5"
+                    Command="{Binding NavigateUrlCommand}"
+                    CommandParameter="{Binding ElementName=AddressBox, Path=Text}" Content="Navigate"/>
+            <TextBox Name="AddressBox" Text="{Binding Url, Mode=OneWay}" Margin="5"
+                     VerticalContentAlignment="Center">
+                <TextBox.InputBindings>
+                    <KeyBinding Key="Return"
+                                Command="{Binding NavigateUrlCommand}"
+                                CommandParameter="{Binding ElementName=AddressBox, Path=Text}" />
+                </TextBox.InputBindings>
+            </TextBox>
+        </DockPanel>
+        <atlantis:AvaloniaHost x:Name="BrowserHost">
+            <views1:EmbeddedBrowserView />
+        </atlantis:AvaloniaHost>
+    </DockPanel>
+</Window>

@@ -1,0 +1,25 @@
+<Project Sdk="Xpf.Sdk/1.5.3">
+    <PropertyGroup>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <UseWpf>true</UseWpf>
+        <OutputType>exe</OutputType>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Add your XPF license key -->
+        <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Resource Include="Assets\*" />
+        <AvaloniaResource Include="Assets\*" />
+
+        <None Include="dotnetbrowser.license">
+            <Link>dotnetbrowser.license</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+
+        <PackageReference Include="DotNetBrowser.AvaloniaUi" Version="3.3.1" />
+    </ItemGroup>
+</Project>
