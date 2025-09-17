@@ -11,7 +11,7 @@ namespace XpfPrintingSample
 {
     public partial class MainWindow : Window
     {
-        private string _generatedPdfPath = "print_demo_output.pdf";
+        private string savedPdfPath = "print_demo_output.pdf";
 
         public MainWindow()
         {
@@ -42,33 +42,16 @@ namespace XpfPrintingSample
 
         private void PrintButton_Click(object sender, RoutedEventArgs e)
         {
-            PrintToPdf();
-        }
-
-        private void PrintToPdf()
-        {
-            using var stream = File.Create(_generatedPdfPath);
+            using var stream = File.Create(savedPdfPath);
             using var writer = PrintableDocumentWriter.Create(stream);
-
-            void Print(FrameworkElement el)
-            {
-                if (!double.IsNaN(el.Width) && !double.IsNaN(el.Height))
-                {
-                    el.Measure(new Size(el.Width, el.Height));
-                    el.Arrange(new Rect(new Point(0, 0), el.DesiredSize));
-                }
-
-                writer.AddPage(el);
-            }
-
-            Print(PrintableArea);
-
-            MessageBox.Show("PDF exported to: " + _generatedPdfPath, "Success");
+            writer.AddPage(PrintableArea);
+            MessageBox.Show("PDF exported to: " + savedPdfPath, "Success");
         }
+        
 
         private async void PrintNowButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!File.Exists(_generatedPdfPath))
+            if (!File.Exists(savedPdfPath))
             {
                 MessageBox.Show("No PDF found to print. Please generate it first.");
                 return;
@@ -87,7 +70,7 @@ namespace XpfPrintingSample
             {
                 var tasks = Enumerable
                     .Range(0, count)
-                    .Select(_ => wrapper.Print(new PrintingOptions(printerName, _generatedPdfPath)));
+                    .Select(_ => wrapper.Print(new PrintingOptions(printerName, savedPdfPath)));
 
                 await Task.WhenAll(tasks);
 
