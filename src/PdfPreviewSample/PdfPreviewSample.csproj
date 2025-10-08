@@ -1,0 +1,24 @@
+﻿<Project Sdk="Xpf.Sdk/1.6.0-cibuild002252">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)"/>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Xpf.Controls.WebView" Version="11.3.10" />
+    <PackageReference Include="AvaloniaUI.XpfAdaptations.PDFtoPrinter" Version="1.0.0-cibuild000008" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\*"/>
+    <AvaloniaResource Include="Assets\*"/>
+  </ItemGroup>
+
+</Project>
