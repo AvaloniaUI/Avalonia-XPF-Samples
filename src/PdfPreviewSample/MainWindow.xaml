@@ -13,23 +13,45 @@
         </Grid.RowDefinitions>
         
         <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,10">
+            <Label Content="Product:" 
+                   VerticalAlignment="Center" 
+                   Margin="0,0,1,0"/>
             <TextBox x:Name="NameInput" 
-                     Width="150" 
-                     Margin="0,0,10,0"/>
+                     Width="70"
+                     Height="18"
+                     TextAlignment="Center"
+                     Margin="0,0,6,0"/>
+            
+            <Label Content="Quantity:" 
+                   VerticalAlignment="Center" 
+                   Margin="0,0,1,0"/>
             <TextBox x:Name="QtyInput" 
-                     Width="60" Margin="0,0,10,0" 
+                     Width="60"
+                     Height="18"
+                     Margin="0,0,6,0" 
+                     TextAlignment="Center"
                      Text="1"/>
+            
+            <Label Content="Price:" 
+                   VerticalAlignment="Center" 
+                   Margin="0,0,1,0"/>
             <TextBox x:Name="PriceInput" 
-                     Width="80" Margin="0,0,10,0" 
+                     Width="80"
+                     Height="18"
+                     Margin="0,0,8,0"
+                     TextAlignment="Center"
                      Text="0.00"/>
+            
             <Button Content="Add Item" 
-                    Width="100" 
+                    Width="100"
+                    Height="25"
                     Click="AddItemButton_Click"/>
+            
             <Button Content="Generate PDF" 
                     Width="130" 
-                    Height="20" 
+                    Height="25" 
                     HorizontalAlignment="Right"
-                    Margin="10,0,0,0" 
+                    Margin="8,0,0,0" 
                     Click="GenerateAndPreviewPdfButton_Click"/>
         </StackPanel>
         
