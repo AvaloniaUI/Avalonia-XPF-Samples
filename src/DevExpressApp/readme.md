@@ -28,4 +28,4 @@ This project includes the XPF NuGet feed, which is configured in [`NuGet.Config`
 - Alternatively, add your XPF license key directly in [`NuGet.Config`](./NuGet.config) and [`DevExpressApp.csproj`](./DevExpressApp.csproj)
 
 ### DevExpress Licensing
-The DevExpress package source URl utilizes an environment variable (%DevExpress%). Set your DevExpress license key as enviromental variable DevExpress or add into URI, see [`NuGet.Config`](./NuGet.Config).
+The DevExpress package source URl utilizes an environment variable (%DevExpressKey%). Set your DevExpress license key as enviromental variable `DevExpressKey` or add into URI, see [`NuGet.Config`](./NuGet.Config).
