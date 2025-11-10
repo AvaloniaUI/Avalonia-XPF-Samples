@@ -143,6 +143,37 @@ namespace WpfCalculator
             _result = 0;
             labelResult.Content = $"{_lastNumber}";
         }
+
+        private void MainWindow_OnTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var s = e.Text;
+            var c = (s.ToCharArray())[0];
+            e.Handled = true;
+
+            if ((c >= '0' && c <= '9') || c == '.' || c == '\b') // '\b' is backspace
+            {
+                _setNumber(c - '0');
+                return;
+            }
+            switch (c)
+            {
+                case '+':
+                    _buttonOperation_Click(buttonAdd, e);
+                    break;
+                case '-':
+                    _buttonOperation_Click(buttonSubtract, e);
+                    break;
+                case '*':
+                    _buttonOperation_Click(buttonMultiply, e);
+                    break;
+                case '/':
+                    _buttonOperation_Click(buttonDivide, e);
+                    break;
+                case '=':
+                    _buttonEqual_Click(buttonEqual, e);
+                    break;
+            }
+        }
     }
 
     public enum Operator
