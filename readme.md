@@ -31,7 +31,7 @@ This sample demonstrates how you can add WPF controls to your existing Avalonia 
 
 ## Mobile & WebAssembly 
 We have iOS, Android and WebAssembly support in preview with select customers. To enable these platforms, we recommend creating a Single Project, which contains Desktop, Mobile and Web versions of your WPF applications. 
-The sample app demonstrates this apporach. 
+The sample app demonstrates this approach. 
 
 ![WASM Screenshot](/assets/wasm-calc.png)
 
