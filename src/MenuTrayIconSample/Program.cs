@@ -15,6 +15,10 @@ namespace MenuTrayIconSample
             AppBuilder.Configure<AvaloniaApp>()
                 .UsePlatformDetect()
                 .WithAvaloniaXpf()
+                .With(new X11PlatformOptions
+                {
+                    UseDBusFilePicker = false,
+                })
                 .SetupWithoutStarting();
 
             App.Main();
