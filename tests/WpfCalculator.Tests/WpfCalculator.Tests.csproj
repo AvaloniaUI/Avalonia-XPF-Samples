@@ -1,0 +1,32 @@
+<Project Sdk="Xpf.Sdk/1.5.3">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+        <!-- Important to disable automatic Avalonia XPF initialization, because tests will do it manually -->
+        <DisableAutomaticXpfInit>true</DisableAutomaticXpfInit>
+    </PropertyGroup>
+
+    <ItemGroup>
+<!--        <PackageReference Include="Avalonia.Headless.XUnit" Version="$(XpfAvaloniaVersion)" />-->
+        <PackageReference Include="Avalonia.Headless.XUnit" Version="11.3.999-cibuild0059922-alpha" />
+        <PackageReference Include="coverlet.collector" Version="6.0.0"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0"/>
+        <PackageReference Include="xunit" Version="2.5.3"/>
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Using Include="Xunit"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\WpfCalculator\WpfCalculator.csproj" />
+    </ItemGroup>
+
+</Project>
