@@ -1,4 +1,4 @@
-<Project Sdk="Xpf.Sdk/1.4.0-cibuild001849">
+<Project Sdk="Xpf.Sdk/1.5.3">
     <PropertyGroup>
         <TargetFrameworks>net8.0;net8.0-ios;net8.0-android;net8.0-browser</TargetFrameworks>
         <UseWpf>true</UseWpf>

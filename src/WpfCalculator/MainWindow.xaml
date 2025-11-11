@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfCalculator"
         mc:Ignorable="d"
-        Title="Calculator" d:Height="500" d:Width="300" Background="#111" Icon="appicon.ico">
+        Title="Calculator" d:Height="500" d:Width="300" Background="#111" Icon="appicon.ico"
+        TextInput="MainWindow_OnTextInput">
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -23,6 +24,7 @@
         </Grid.RowDefinitions>
 
         <Label x:Name="labelResult" 
+               x:FieldModifier="public"
                Content="0"
                Style="{StaticResource resultLabelStyle}"
                HorizontalAlignment="Right"
@@ -31,21 +33,25 @@
         
         <!-- ROW 1 -->
         <Button x:Name="buttonAllClear"
+                x:FieldModifier="public"
                 Content="C"
                 Style="{StaticResource additionalButtonsStyle}"
                 Grid.Row="1"
                 Grid.Column="0"/>
         <Button x:Name="buttonNegative"
+                x:FieldModifier="public"
                 Content="-/+"
                 Style="{StaticResource additionalButtonsStyle}"
                 Grid.Row="1"
                 Grid.Column="1"/>
         <Button x:Name="buttonPercent"
+                x:FieldModifier="public"
                 Content="%"
                 Style="{StaticResource additionalButtonsStyle}"
                 Grid.Row="1"
                 Grid.Column="2"/>
         <Button x:Name="buttonDivide"
+                x:FieldModifier="public"
                 Click="_buttonOperation_Click"
                 Content="÷"
                 Style="{StaticResource operatorButtonStyle}"
@@ -54,21 +60,25 @@
 
         <!-- ROW 2 -->
         <Button x:Name="button7"
+                x:FieldModifier="public"
                 Content="7"
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="2"
                 Grid.Column="0"/>
         <Button x:Name="button8"
+                x:FieldModifier="public"
                 Content="8"
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="2"
                 Grid.Column="1"/>
         <Button x:Name="button9"
+                x:FieldModifier="public"
                 Content="9"
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="2"
                 Grid.Column="2"/>
         <Button x:Name="buttonMultiply"
+                x:FieldModifier="public"
                 Click="_buttonOperation_Click"
                 Content="×"
                 Style="{StaticResource operatorButtonStyle}"
@@ -77,21 +87,25 @@
 
         <!-- ROW 3 -->
         <Button x:Name="button4"
+                x:FieldModifier="public"
                 Content="4"
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="3"
                 Grid.Column="0"/>
         <Button x:Name="button5"
+                x:FieldModifier="public"
                 Content="5"
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="3"
                 Grid.Column="1"/>
         <Button x:Name="button6"
+                x:FieldModifier="public"
                 Content="6"
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="3"
                 Grid.Column="2"/>
         <Button x:Name="buttonSubtract"
+                x:FieldModifier="public"
                 Click="_buttonOperation_Click"
                 Content="-"
                 Style="{StaticResource operatorButtonStyle}"
@@ -100,21 +114,25 @@
         
         <!-- ROW 4 -->
         <Button x:Name="button1"
+                x:FieldModifier="public"
                 Content="1"
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="4"
                 Grid.Column="0"/>
         <Button x:Name="button2"
+                x:FieldModifier="public"
                 Content="2"
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="4"
                 Grid.Column="1"/>
         <Button x:Name="button3"
+                x:FieldModifier="public"
                 Content="3"
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="4"
                 Grid.Column="2"/>
         <Button x:Name="buttonAdd"
+                x:FieldModifier="public"
                 Click="_buttonOperation_Click"
                 Content="+"
                 Style="{StaticResource operatorButtonStyle}"
@@ -123,17 +141,20 @@
 
         <!-- ROW 5 -->
         <Button x:Name="button0"
+                x:FieldModifier="public"
                 Content="0"
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="5"
                 Grid.Column="0"
                 Grid.ColumnSpan="2"/>
         <Button x:Name="buttonDecimal"
+                x:FieldModifier="public"
                 Content="."
                 Style="{StaticResource numberButtonStyle}"
                 Grid.Row="5"
                 Grid.Column="2"/>
         <Button x:Name="buttonEqual"
+                x:FieldModifier="public"
                 Content="="
                 Style="{StaticResource operatorButtonStyle}"
                 Grid.Row="5"
