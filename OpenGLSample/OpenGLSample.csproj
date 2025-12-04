@@ -20,7 +20,7 @@
 
 
 	<ItemGroup>
-		<RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="AQAAAHsAAAAfiwgAAAAAAAADY2RgYJBgZAADbseyxJz8vMxEhVDPE38WijFAAQsQs+Zk5pVWsOYmJucXs5dn5qXklxezJxUBydQiVqA8c0VBGg8Q6yYWZOoWZ2TmgjlAhWn5RbnFvKXFiempVkWleSWZuamcEF5xSjYASx3Jm34AAAAAAQAAK/B6LhwLAZ7DZId1JHTH1LBnLMFbUgqLM4AAaaI1veAL6JBi9Iir8RuxlzMOfi9j3onA0RX6o0bW3usjkUBrkjJ0K8sT3EEFk6LkKAVtGMc1KgSm2ekjwnH5kFh5TMCnVc08zpMdEdhscZyNB+C3QWN7cTVOoDuUV2puT+M6kkCTxCa2HDNTK5oa6ER9ZiD1xlh15FApUkQ2Uxe8ZamnXkCboyVJq6+eIv52xSGmRAWQ6wmT98/eTIpHBqoG1upu1BuvdsLUVl+3IsbABk/h6a31bpqIIp4IVsSHmfZZoHXp/h9OmPjtwWAMjasKcTICKfiMbMhalQ8U8EXrz3w3rw==" />
+		<RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />
 	</ItemGroup>
 
 </Project>
