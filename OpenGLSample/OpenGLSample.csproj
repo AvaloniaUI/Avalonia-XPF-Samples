@@ -1,0 +1,26 @@
+﻿<Project Sdk="Xpf.Sdk/1.6.0-cibuild002328">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<IncludeAvaloniaGenerators>true</IncludeAvaloniaGenerators>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="teapot.bin" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="teapot.bin" />
+	</ItemGroup>
+
+
+
+	<ItemGroup>
+		<RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />
+	</ItemGroup>
+
+</Project>
