@@ -22,7 +22,6 @@
 
     <ItemGroup>
         <PackageReference Include="DevExpress.Wpf.Core" Version="24.2.7" />
-        <PackageReference Include="DevExpress.Data" Version="24.2.7" />
         <PackageReference Include="DevExpress.Data.Desktop" Version="24.2.7" />
         <PackageReference Include="DevExpress.Pdf.SkiaRenderer" Version="24.2.7" />
         <PackageReference Include="DevExpress.Wpf.Spreadsheet" Version="24.2.7" />

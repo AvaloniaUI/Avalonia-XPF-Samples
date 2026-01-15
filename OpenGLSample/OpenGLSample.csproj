@@ -1,4 +1,4 @@
-﻿<Project Sdk="Xpf.Sdk/1.6.0-cibuild002328">
+﻿<Project Sdk="Xpf.Sdk/1.6.0-cibuild002369">
 
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>

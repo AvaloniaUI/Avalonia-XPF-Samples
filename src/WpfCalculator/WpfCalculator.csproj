@@ -1,6 +1,6 @@
-<Project Sdk="Xpf.Sdk/1.5.3">
+<Project Sdk="Xpf.Sdk/1.6.0-cibuild002369">
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net8.0-ios;net8.0-android;net8.0-browser</TargetFrameworks>
+        <TargetFrameworks>net10.0;net10.0-ios;net10.0-android;net10.0-browser</TargetFrameworks>
         <UseWpf>true</UseWpf>
         <OutputType>exe</OutputType>
         <XpfSingleProject>true</XpfSingleProject>
