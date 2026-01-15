@@ -5,22 +5,23 @@
         <OutputType>exe</OutputType>
         <XpfSingleProject>true</XpfSingleProject>
         <ApplicationId>AvaloniaUI.CalculatorDemo</ApplicationId>
+        <!-- Necessary on .NET 10 SDK -->
+        <RestoreEnablePackagePruning>false</RestoreEnablePackagePruning>
     </PropertyGroup>
 
     <!-- Temporary hack for iOS -->
-    <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0-ios' AND '$(RuntimeIdentifier)' != 'ios-arm64'">
+    <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0-ios' AND '$(RuntimeIdentifier)' != 'ios-arm64'">
         <RuntimeIdentifier>iossimulator-x64</RuntimeIdentifier>
     </PropertyGroup>
-    
+
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
       <CodesignKey>iPhone Developer</CodesignKey>
     </PropertyGroup>
-    
-    <ItemGroup>
-    </ItemGroup>
+
     <ItemGroup>
         <TrimmerRootAssembly Include="WpfCalculator" />
         <Resource Include="appicon.ico"/>
+        <!-- Important, license key must include android/ios/browser platforms to run corresponding targets -->
         <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey" Value="$(XpfLicenseKey)" />    
     </ItemGroup>
 </Project>
