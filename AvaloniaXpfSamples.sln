@@ -33,7 +33,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCalculator.Tests", "tests\WpfCalculator.Tests\WpfCalculator.Tests.csproj", "{E4B26BC0-83B3-4ED1-9200-2F3E6E98B093}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGLSample", "OpenGLSample\OpenGLSample.csproj", "{D098ADAB-68F5-4D37-A5BB-D8E78830902E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGLSample", "src\OpenGLSample\OpenGLSample.csproj", "{D098ADAB-68F5-4D37-A5BB-D8E78830902E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
